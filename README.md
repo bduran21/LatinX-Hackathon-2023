@@ -1,1 +1,1 @@
-# Vamos-Hackathon-2023
+# LatinX-Hackathon-2023
