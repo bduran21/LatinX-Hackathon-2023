@@ -48,8 +48,15 @@ function browseGeocode(platform, at) {
         position: "40.776676,-73.971321",
         mapZoom: 14,
         mapCenter: {lat:40.776676, lng:-73.971321}
+    },
+    {
+      id: 3,
+      value: "losangeles",
+      name: "Los Angeles, CA",
+      position: "34.0549,-118.2426",
+      mapZoom: 14,
+      mapCenter: {lat:34.054, lng:-118.2426}
     }
-  
   ]
   
   function createUIforDropdown() {
