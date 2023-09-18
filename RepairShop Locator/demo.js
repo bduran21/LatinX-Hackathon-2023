@@ -11,7 +11,7 @@
 function browseGeocode(platform, at) {
   var geocoder = platform.getSearchService(),
       browseParameters = {
-        q: 'EV Charging Station',
+        q: 'Car Repair',
         at: at,
         limit: 30,
         radius: 16000
