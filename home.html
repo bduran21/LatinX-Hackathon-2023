@@ -70,27 +70,23 @@ body, html {
 <!-- ABOUT Section -->
 <div class="w3-container w3-dark-grey" style="padding:128px 16px" id="ABOUT">
   <h3 class="w3-center">ABOUT US</h3>
-  <p class="w3-center w3-large">Key features of our company</p>
+  <p class="w3-center w3-large">Key features of our website</p>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
-    <div class="w3-quarter">
-      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-      <p class="w3-large">Responsive</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    <div class="w3-third">
+      <i class="fa fa-battery-3 w3-margin-bottom w3-jumbo w3-center"></i>
+      <!-- <img src="images/hereTech.png" alt="HERE Technologies" width="250" height="250"> -->
+      <p class="w3-large">Local Charging Stations</p>
+      <p>View local charging stations for your EV based on your selected city.</p>
     </div>
-    <div class="w3-quarter">
-      <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Passion</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    <div class="w3-third">
+      <i class="fa fa-wrench w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Local Repair Shops</p>
+      <p>View local car repair shops for your EV based on your selected city.</p>
     </div>
-    <div class="w3-quarter">
-      <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Design</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Support</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+    <div class="w3-third">
+      <i class="fa fa-exclamation-triangle w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Nearby Emergency Buildings</p>
+      <p>In case of Emergency, veiw hositals near your selected city.</p>
     </div>
   </div>
 </div>
@@ -128,16 +124,7 @@ body, html {
   <div class="w3-xlarge w3-section">
   </div>
 </footer>
- 
 <script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
 
 // Toggle between showing and hiding the sidebar when clicking the menu icon
 var mySidebar = document.getElementById("mySidebar");
