@@ -27,3 +27,9 @@ Our goal is to assist with the lack of centralized information and access to ess
 - HTML
 - CSS
 - JavaScript
+
+**Code**
+- There is a main html file titled 'home.html' and this is the main website that includes diffrent tabs, imates, and functionality
+- There are also three other folders for each of our key features, ChargingStation Locator, EmergencyBuilding Locator, RepairShop Locator.
+These folders each include  css, js, and html files. The html file in these folders are to display the map itslef within the website,
+while the js file includes HERE's API fucntionality and gathers different informtion based on the feature it is for.
