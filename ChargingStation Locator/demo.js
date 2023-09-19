@@ -1,13 +1,3 @@
-/**
- * Calculates and displays the location of the 'Eiffel Tower'
- * using a landmark geocoding search
- *
- *
- * A full list of available request parameters can be found in the Geocoder API documentation.
- * see: http://developer.here.com/rest-apis/documentation/geocoder/topics/resource-search.html
- *
- * @param   {H.service.Platform} platform    A stub class to access HERE services
- */
 function browseGeocode(platform, at) {
   var geocoder = platform.getSearchService(),
       browseParameters = {
@@ -24,6 +14,7 @@ function browseGeocode(platform, at) {
   );
   }
   
+  // Shows cities to be selected from
   const cities = [
     {
         id: 0,
@@ -94,46 +85,26 @@ function browseGeocode(platform, at) {
     map.removeObjects(map.getObjects())
   }
   
-  /**
-   * This function will be called once the Geocoder REST API provides a response
-   * @param  {Object} result          A JSONP object representing the  location(s) found.
-   *
-   * see: http://developer.here.com/rest-apis/documentation/geocoder/topics/resource-type-response-geocode.html
-   */
   function onSuccess(result) {
     var locations = result.items;
-   /*
-    * The styling of the geocoding response on the map is entirely under the developer's control.
-    * A representitive styling can be found the full JS + HTML code of this example
-    * in the functions below:
-    */
     addLocationsToMap(locations);
     addLocationsToPanel(locations);
-    // ... etc.
   }
   
-  /**
-   * This function will be called if a communication error occurs during the JSON-P request
-   * @param  {Object} error  The error message received.
-   */
+  //This function will be called if a communication error occurs during the JSON-P request
   function onError(error) {
     alert('Can\'t reach the remote server');
   }
   
   var citiesIndex = 0;
-  
-  /**
-   * Boilerplate map initialization code starts below:
-   */
-  
-  //Step 1: initialize communication with the platform
-  // In your own code, replace variable window.apikey with your own apikey
+
+  //Boilerplate map initialization code starts below:
   var platform = new H.service.Platform({
     apikey: '_GgeBaCx0yec85fdshFNVEytBx03dLFjWzIHHSod7pk'
   });
   var defaultLayers = platform.createDefaultLayers();
   
-  //Step 2: initialize a map - this map is centered over California
+  //Initialize a map
   var map = new H.Map(document.getElementById('maps'),
     defaultLayers.vector.normal.map,{
     center: {lat:45.52, lng:-122.68},
@@ -146,7 +117,6 @@ function browseGeocode(platform, at) {
   var locationsContainer = document.getElementById('discoveryPanel');
   var discoveryTitleContainer = document.getElementById('discoveryTitle');
   
-  //Step 3: make the map interactive
   // MapEvents enables the event system
   // Behavior implements default interactions for pan/zoom (also on mobile touch environments)
   var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
